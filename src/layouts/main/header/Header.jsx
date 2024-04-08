@@ -3,7 +3,7 @@ import Slider from "../../../components/slider/Slider";
 
 const Header = () => {
     return (
-        <div>
+        <div className="">
             <Slider></Slider>
         </div>
     );
