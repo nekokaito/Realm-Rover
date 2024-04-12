@@ -5,8 +5,14 @@ import { AuthContext } from "../../provider/AuthProvider";
 
 const NavBar = () => {
 
-   const {user} = useContext(AuthContext);
+   const {user, logOut} = useContext(AuthContext);
 
+   const handleLogOut = () => {
+    logOut()
+    .then()
+    .catch()
+   }
+   
     const navLinks = <div className="md:flex gap-3">
              
              <li><NavLink to="/">Home</NavLink></li>
@@ -39,14 +45,14 @@ const NavBar = () => {
   </div>
   <div className="navbar-end">
     {
-      user ? <Link to="/login"><button className="btn">Login</button></Link> : (
+      !user ? <Link to="/login"><button className="btn">Login</button></Link> : (
         <div className="flex gap-2">
    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
       </div>
-      <Link to="/login"><button className="btn">Logout</button></Link> 
+      <Link to="/login"><button onClick={handleLogOut} className="btn">Logout</button></Link> 
    </div>
 
       )
