@@ -5,7 +5,7 @@ const NavBar = () => {
     const navLinks = <div className="md:flex gap-3">
              
              <li><NavLink to="/">Home</NavLink></li>
-             <li><NavLink to="/update">Update</NavLink></li>
+             <li><NavLink to="/update">Update Profile</NavLink></li>
              <li><NavLink to="/profile">Profile</NavLink></li>
 
         </div>
@@ -24,7 +24,8 @@ const NavBar = () => {
         }
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl" data-aos="fade-left">Realm Rover</a>
+    <Link> <img className="w-52" src="logo.png" alt="" data-aos="fade-left"/></Link>
+    
   </div>
   <div className="navbar-center hidden lg:flex" data-aos="fade-left">
     <ul className="menu menu-horizontal px-1">
