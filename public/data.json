@@ -9,7 +9,7 @@
         "status": "sale",
         "area": "60000 sq ft",
         "location": "Downtown",
-        "image": "hospital_image.jpg",
+        "image": "https://i.ibb.co/xLjGqLq/Evergreen-Medical-Center.jpg",
         "facilities": ["Emergency room", "Operating theaters", "Radiology department", "Intensive care unit"]
       },
       {
@@ -22,7 +22,7 @@
         "status": "sale",
         "area": "25000 sq ft",
         "location": "Suburb",
-        "image": "school_image.jpg",
+        "image": "https://i.ibb.co/0JB7zRH/maplewood-elementary-school-kansas-city-mo-6.jpg",
         "facilities": ["Classrooms", "Playground", "Computer lab", "Library"]
       },
       {
@@ -35,8 +35,22 @@
         "status": "sale",
         "area": "12000 sq ft",
         "location": "Residential Area",
-        "image": "church_image.jpg",
+        "image": "https://i.ibb.co/G9HTBqq/549-Getrude-Trinity-Baptist-20200724-MG-0572-scaled.jpg",
         "facilities": ["Main sanctuary", "Fellowship hall", "Sunday school rooms"]
+      }
+      ,
+      {
+        "type": "Hotel",
+        "estate_title": "Luxury Haven Hotel & Spa",
+        "id": "HOT001",
+        "segment_name": "Hospitality",
+        "description": "Five-star hotel providing exquisite accommodations and wellness facilities",
+        "price": 75000000,
+        "status": "sale",
+        "area": "80000 sq ft",
+        "location": "Waterfront",
+        "image": "https://i.ibb.co/hXgph8n/high.jpg",
+        "facilities": ["Luxury suites", "Fine dining restaurants", "Spa", "Swimming pool"]
       },
       {
         "type": "Transportation Terminal",
@@ -48,7 +62,7 @@
         "status": "sale",
         "area": "40000 sq ft",
         "location": "City Center",
-        "image": "terminal_image.jpg",
+        "image": "https://i.ibb.co/DW9Rv4d/Central-Station.jpg",
         "facilities": ["Ticket counters", "Waiting area", "Restaurants", "Information center"]
       },
       {
@@ -61,7 +75,7 @@
         "status": "rent",
         "area": "70000 sq ft",
         "location": "Business District",
-        "image": "convention_image.jpg",
+        "image": "https://i.ibb.co/890vqmS/Riverside-Convention-Center-sign.jpg",
         "facilities": ["Conference halls", "Exhibition spaces", "Banquet facilities", "Audio-visual equipment"]
       },
       {
@@ -74,7 +88,7 @@
         "status": "sale",
         "area": "18000 sq ft",
         "location": "Artistic Quarter",
-        "image": "gallery_image.jpg",
+        "image": "https://i.ibb.co/5WyccXx/Gallery-360.jpg",
         "facilities": ["Exhibition rooms", "Art storage", "Café", "Retail store"]
       },
       {
@@ -87,46 +101,8 @@
         "status": "sale",
         "area": "200000 sq ft",
         "location": "City Center",
-        "image": "mall_image.jpg",
+        "image": "https://i.ibb.co/HPL1CpW/shopping-mall-in-hanoi-banner.jpg",
         "facilities": ["Retail stores", "Food court", "Cinema", "Fitness center"]
-      },
-      {
-        "type": "Hotel",
-        "estate_title": "Luxury Haven Hotel & Spa",
-        "id": "HOT001",
-        "segment_name": "Hospitality",
-        "description": "Five-star hotel providing exquisite accommodations and wellness facilities",
-        "price": 75000000,
-        "status": "sale",
-        "area": "80000 sq ft",
-        "location": "Waterfront",
-        "image": "hotel_image.jpg",
-        "facilities": ["Luxury suites", "Fine dining restaurants", "Spa", "Swimming pool"]
-      },
-      {
-        "type": "Sports Complex",
-        "estate_title": "Olympic Sports Arena",
-        "id": "SPC001",
-        "segment_name": "Sports",
-        "description": "State-of-the-art sports facility for professional and amateur athletes",
-        "price": 30000000,
-        "status": "sale",
-        "area": "100000 sq ft",
-        "location": "Outskirts",
-        "image": "sports_complex_image.jpg",
-        "facilities": ["Indoor arena", "Outdoor fields", "Gymnasium", "Sports training center"]
-      },
-      {
-        "type": "Tech Park",
-        "estate_title": "Innovate Tech Park",
-        "id": "TEC001",
-        "segment_name": "Technology",
-        "description": "Dynamic hub for technology companies fostering innovation and collaboration",
-        "price": 40000000,
-        "status": "rent",
-        "area": "150000 sq ft",
-        "location": "Tech District",
-        "image": "tech_park_image.jpg",
-        "facilities": ["Office spaces", "Meeting rooms", "Incubation center", "Cafeteria"]
       }
+      
     ]

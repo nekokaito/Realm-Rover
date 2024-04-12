@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-neutral text-neutral-content">
+        <footer className="footer p-10 bg-neutral text-neutral-content glass">
   <aside>
     {/* Logo Here */}
     <p>Industries Ltd.<br/>Providing reliable tech since 1992</p>

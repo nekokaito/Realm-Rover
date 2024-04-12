@@ -12,7 +12,7 @@ const NavBar = () => {
     
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,14 +24,14 @@ const NavBar = () => {
         }
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Realm Rover</a>
+    <a className="btn btn-ghost text-xl" data-aos="fade-left">Realm Rover</a>
   </div>
-  <div className="navbar-center hidden lg:flex">
+  <div className="navbar-center hidden lg:flex" data-aos="fade-left">
     <ul className="menu menu-horizontal px-1">
      {navLinks}
     </ul>
   </div>
-  <div className="navbar-end">
+  <div className="navbar-end" data-aos="fade-left">
    <Link><button className="btn hidden">Login</button></Link> 
    <div className="flex gap-2">
    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
