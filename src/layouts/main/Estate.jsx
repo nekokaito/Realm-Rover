@@ -14,7 +14,7 @@ export default function Estate() {
 
   return (
     <div>
-       <div className="my-10">
+       <div className="my-10" data-aos="fade-down">
         <h1 className="text-4xl text-center font-bold">Estate</h1>
        </div>
 
