@@ -1,16 +1,15 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import Card from "../../components/cards/Card";
 
-export default function Estate() {
+export default function Estate({data}) {
 
     const [allData, setData] = useState([]);
 
     useEffect(() => {
-        fetch('data.json')
-        .then(res => res.json())
-        .then(data => setData(data))
-    }, [])
+      setData(data);
+  }, [data]); 
 
   return (
     <div>

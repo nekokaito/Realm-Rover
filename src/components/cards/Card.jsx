@@ -3,10 +3,11 @@ import { CiLocationOn} from "react-icons/ci";
 import { IoPricetagOutline } from "react-icons/io5";
 import { IoResizeOutline } from "react-icons/io5";
 import { CiCircleList } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 export default function Card({data}) {
 
-  const {estate_title, description, price, status, image, facilities, area, location, segment_name} = data;
+  const {id, estate_title, description, price, status, image, facilities, area, location, segment_name} = data;
 
   return (
     <div className=" p-5 w-full lg:w-80" data-aos="fade-down">
@@ -35,7 +36,7 @@ export default function Card({data}) {
     </div>
     
     <div className="flex my-3 justify-center">
-      <button className="btn btn-primary">View Property</button>
+     <Link to={`/estate/${id}`}><button className="btn btn-primary">View Property</button></Link> 
     </div>
   </div>
 </div>
