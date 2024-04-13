@@ -1,13 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
    
    const {logIn} = useContext(AuthContext)
-
+   const location = useLocation();
+   const navigation = useNavigate();
     const handleLogIn = (e) => {
 
         e.preventDefault();
@@ -18,7 +19,9 @@ const Login = () => {
         const email =  form.get('email');
         const password =  form.get('password');
         logIn (email, password)
-        .then (result => console.log('done', result))
+        .then (() => {
+             navigation(location?.state ? location.state : '/');
+        })
         .catch (error => console.log(error))
         
     

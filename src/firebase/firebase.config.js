@@ -2,15 +2,15 @@
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
+const { VITE_APIKEY, VITE_AUTHDOMAIN, VITE_PROJECTID, VITE_STORAGEBUCKET, VITE_MESSAGINGSENDERID, VITE_APPID } = import.meta.env;
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB0km_dGIP5mv2sban3j9tipZCqQr7f1YA",
-  authDomain: "realmrover-85300.firebaseapp.com",
-  projectId: "realmrover-85300",
-  storageBucket: "realmrover-85300.appspot.com",
-  messagingSenderId: "90870797669",
-  appId: "1:90870797669:web:0608e3f333c61f6e533d8c"
+  apiKey: VITE_APIKEY,
+  authDomain: VITE_AUTHDOMAIN,
+  projectId: VITE_PROJECTID,
+  storageBucket: VITE_STORAGEBUCKET,
+  messagingSenderId: VITE_MESSAGINGSENDERID,
+  appId: VITE_APPID,
 };
 
 // Initialize Firebase
