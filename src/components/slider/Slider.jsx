@@ -20,10 +20,10 @@ const Slider = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide><img src="https://i.ibb.co/xM8k3KM/silder1-1.jpg" alt="" /></SwiperSlide>
-      <SwiperSlide><img src="https://i.ibb.co/HHVyh7p/silder1-2.jpg" alt="" /></SwiperSlide>
-      <SwiperSlide><img src="https://i.ibb.co/dPq2kJ4/silder1-1.jpg" alt="" /></SwiperSlide>
-      <SwiperSlide><img src="https://i.ibb.co/qy0ZyGh/silder1-3.jpg" alt="" /></SwiperSlide>
+      <SwiperSlide><img className="rounded-3xl" src="https://i.ibb.co/xM8k3KM/silder1-1.jpg" alt="" /></SwiperSlide>
+      <SwiperSlide><img className="rounded-3xl" src="https://i.ibb.co/HHVyh7p/silder1-2.jpg" alt="" /></SwiperSlide>
+      <SwiperSlide><img className="rounded-3xl" src="https://i.ibb.co/dPq2kJ4/silder1-1.jpg" alt="" /></SwiperSlide>
+      <SwiperSlide><img className="rounded-3xl" src="https://i.ibb.co/qy0ZyGh/silder1-3.jpg" alt="" /></SwiperSlide>
     </Swiper>
         </div>
         

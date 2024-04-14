@@ -2,14 +2,21 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { FaGoogle, FaGithub  } from "react-icons/fa";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 
 const Login = () => {
    
-   const {logIn} = useContext(AuthContext)
+   const {logIn, googleLogin, githubLogin} = useContext(AuthContext)
    const location = useLocation();
    const navigation = useNavigate();
-    const handleLogIn = (e) => {
+    const test = () => {
+      toast.success('Successfully Login!')
+    }
+   
+   const handleLogIn = (e) => {
 
         e.preventDefault();
     
@@ -20,16 +27,24 @@ const Login = () => {
         const password =  form.get('password');
         logIn (email, password)
         .then (() => {
+             toast.success('Successfully Login!');
              navigation(location?.state ? location.state : '/');
         })
         .catch (error => console.log(error))
-        
-    
-       }
+      }
+      const handleGoogleLogIn = (e) => {
+        e.preventDefault();
+        googleLogin()
+        .then (() => {
+          navigation(location?.state ? location.state : '/');
+     })
+         .catch (error => console.log(error))
+      }
     
     
       return (
         <>
+        <Toaster />
          <h1 className="text-4xl text-center my-10 font-bold">Login Now!</h1>
         <div className="flex my-14 justify-center p-10">
             <div className="glass w-full md:w-1/2 xl:w-3/12 rounded-3xl">
@@ -54,6 +69,14 @@ const Login = () => {
             </div>
             <div className="my-5">
                 <p className="text-sm font-extralight"> Don't You Have An Account? <Link className="italic text-blue-400" to="/register">Register Now!</Link></p>
+             </div>
+
+             <hr />
+
+             <div className="flex justify-center gap-2">
+              <div onClick={handleGoogleLogIn} className="btn w-24"><FaGoogle /></div>
+              <div onClick={githubLogin} className="btn w-24"><FaGithub /></div>
+              
              </div>
           </form>
             </div>

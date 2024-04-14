@@ -6,7 +6,10 @@ const Root = () => {
     return (
         <div>
             <div className="container mx-auto min-h-screen">
-            <NavBar></NavBar>
+                
+                <NavBar></NavBar>
+                
+            
             <Outlet></Outlet>
             </div>
             
