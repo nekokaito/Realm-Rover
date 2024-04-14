@@ -1,9 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Link } from "react-router-dom";
 
 const Register = () => {
    const {createUser} = useContext(AuthContext)
+
+   useEffect(() => {
+    document.title = "Register | Realm Rover";
+  }, []);
    const handleReg = (e) => {
 
     e.preventDefault();

@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaGithub  } from "react-icons/fa";
@@ -12,9 +12,9 @@ const Login = () => {
    const {logIn, googleLogin, githubLogin} = useContext(AuthContext)
    const location = useLocation();
    const navigation = useNavigate();
-    const test = () => {
-      toast.success('Successfully Login!')
-    }
+   useEffect(() => {
+    document.title = "Login | Realm Rover";
+  }, []);
    
    const handleLogIn = (e) => {
 
