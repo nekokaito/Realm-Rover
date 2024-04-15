@@ -40,6 +40,15 @@ const Login = () => {
      })
          .catch (error => console.log(error))
       }
+
+      const handleGithubLogIn = (e) => {
+        e.preventDefault();
+        githubLogin()
+        .then (() => {
+          navigation(location?.state ? location.state : '/');
+     })
+         .catch (error => console.log(error))
+      }
     
     
       return (
@@ -75,7 +84,7 @@ const Login = () => {
 
              <div className="flex justify-center gap-2">
               <div onClick={handleGoogleLogIn} className="btn w-24"><FaGoogle /></div>
-              <div onClick={githubLogin} className="btn w-24"><FaGithub /></div>
+              <div onClick={handleGithubLogIn} className="btn w-24"><FaGithub /></div>
               
              </div>
           </form>

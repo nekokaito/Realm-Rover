@@ -12,7 +12,7 @@ const NavBar = () => {
     .then()
     .catch()
    }
-   
+   console.log(user)
     const navLinks = <div className="md:flex gap-3">
              
              <li><NavLink to="/">Home</NavLink></li>
@@ -47,9 +47,11 @@ const NavBar = () => {
     {
       !user ? <Link to="/login"><button className="btn">Login</button></Link> : (
         <div className="flex gap-2">
-   <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+   <div tabIndex={0} role="button" className=" rounded-full btn btn-ghost btn-circle avatar tooltip tooltip-bottom hover:bg-transparent " data-tip={user?.displayName}>
+    
+        <div className="w-10 rounded-full ">
+          <img alt={user?.displayName} src={user?.photoURL} />
+          
         </div>
       </div>
       <Link to="/login"><button onClick={handleLogOut} className="btn">Logout</button></Link> 

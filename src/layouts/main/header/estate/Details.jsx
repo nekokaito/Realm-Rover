@@ -42,7 +42,7 @@ const Details = () => {
                <div className="text-center">
                 <p> <span className=" font-semibold">Description:</span> {description}</p>
                </div>
-               <h3 className="font-semibold mt-2">Facilities:</h3>
+               <h3 className="font-semibold mt-2 text-center mr-10">Facilities</h3>
                <div className="p-5 grid grid-cols-2">
                  {
                     facilities.map(i => <li key={id}>{i}</li>)

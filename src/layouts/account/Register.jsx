@@ -1,9 +1,14 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const Register = () => {
-   const {createUser} = useContext(AuthContext)
+   const {createUser, updateProfile} = useContext(AuthContext)
+   const {error, setError} = useState('');
+   const location = useLocation();
+   const navigation = useNavigate();
 
    useEffect(() => {
     document.title = "Register | Realm Rover";
@@ -20,9 +25,47 @@ const Register = () => {
     const photoUrl =  form.get('photo-url');
     const password =  form.get('password');
 
+
+    setError("");
+
+    if (!/.{6,}/.test(password)) {
+      setError(
+        "Length must be at least 6 character"
+      );
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setError(
+        "Must have an Uppercase letter in the password"
+      );
+      return;
+    } else if (!/[a-z]/.test(password)) {
+      setError(
+        "Must have a Lowercase letter in the password"
+      );
+      return;
+    }
+
     createUser(email, password)
-    .then(result => console.log(result))
-    .catch(error => console.log(error))
+    .then((result) => {
+      console.log(result.user);
+      toast.success("Registration Successful");
+
+      updateProfile(result.user, {
+        displayName: name,
+        photoURL: photoUrl,
+      })
+      .then (() => {
+        toast.success('Registration Completed');
+        navigation(location?.state ? location.state : '/');
+   })
+        .catch();
+
+  
+    })
+    .catch((error) => {
+      console.error(error);
+      setError(error.message);
+    });
 
    }
 

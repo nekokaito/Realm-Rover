@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signInWithPopup, updateProfile } from "firebase/auth";
 import app from "../firebase/firebase.config";
 export const AuthContext = createContext(null);
 
@@ -35,7 +35,12 @@ const AuthProvider = ({children}) => {
         setLoading(true);
         return signInWithPopup(auth, GithubProvider)
     }
-
+    const updateUserProfile = (name, photo) => {
+        return updateProfile(auth.currentUser, {
+          displayName: name,
+          photoURL: photo,
+        });
+      };
     useEffect(()=> {
        const unSubscribe = onAuthStateChanged (auth, currentUser => {
             setUser(currentUser);
@@ -47,7 +52,7 @@ const AuthProvider = ({children}) => {
     }, [])
 
 
-    const authInfo = {user, createUser, logOut, logIn, loading, googleLogin, githubLogin}
+    const authInfo = {user, createUser, logOut, logIn, loading, googleLogin, githubLogin, updateUserProfile}
 
     return (
         <AuthContext.Provider value={authInfo}>
