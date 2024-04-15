@@ -12,10 +12,10 @@ const Login = () => {
    const {logIn, googleLogin, githubLogin} = useContext(AuthContext)
    const location = useLocation();
    const navigation = useNavigate();
-   useEffect(() => {
+ 
+     useEffect(() => {
     document.title = "Login | Realm Rover";
   }, []);
-   
    const handleLogIn = (e) => {
 
         e.preventDefault();
