@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 
 export default function Card({data}) {
 
-  const {id, estate_title, description, price, status, image, facilities, area, location, segment_name} = data;
+  const {id, estate_title, description, price, status, image, area, location, segment_name} = data;
 
   return (
     <div className=" p-5 w-full lg:w-80" data-aos="fade-down">
-      <div className="card w-full lg:w-80 min-h-[750px] glass">
+      <div className="card w-full lg:w-80 min-h-[450px] glass">
   <figure><img className="h-45" src={image} alt={estate_title}/></figure>
   
   <div className="card-body p-5 ">
@@ -27,14 +27,6 @@ export default function Card({data}) {
    <div className="flex items-center gap-2"> <IoResizeOutline />{area}</div>
    <div className="flex items-center gap-2"> <IoPricetagOutline />{price/ 1000000}M$</div>
    </div>
-    <div className="px-5">
-    <ul className="list-disc my-3">
-        {
-            facilities.map((facility, i) => <li key={i}>{facility}</li>)
-        }
-    </ul>
-    </div>
-    
     <div className="flex my-3 justify-center">
      <Link to={`/estate/${id}`}><button className="btn btn-primary">View Property</button></Link> 
     </div>
