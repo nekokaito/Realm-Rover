@@ -6,10 +6,10 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const Register = () => {
    const {createUser, updateProfile} = useContext(AuthContext)
-   const {error, setError} = useState('');
+   const [errorReg, setErrorReg] = useState('');
    const location = useLocation();
    const navigation = useNavigate();
-
+  console.log(errorReg);
    useEffect(() => {
     document.title = "Register | Realm Rover";
   }, []);
@@ -26,20 +26,20 @@ const Register = () => {
     const password =  form.get('password');
 
 
-    setError("");
+    setErrorReg('');
 
     if (!/.{6,}/.test(password)) {
-      setError(
+      setErrorReg(
         "Length must be at least 6 character"
       );
       return;
     } else if (!/[A-Z]/.test(password)) {
-      setError(
+      setErrorReg(
         "Must have an Uppercase letter in the password"
       );
       return;
     } else if (!/[a-z]/.test(password)) {
-      setError(
+      setErrorReg(
         "Must have a Lowercase letter in the password"
       );
       return;
@@ -64,7 +64,7 @@ const Register = () => {
     })
     .catch((error) => {
       console.error(error);
-      setError(error.message);
+      setErrorReg(error.message);
     });
 
    }
@@ -103,6 +103,9 @@ const Register = () => {
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Create Account</button>
+        </div>
+        <div>
+          <p className=" text-red-500 text-sm"> {errorReg}</p>
         </div>
         <div className="my-5">
                 <p className="text-sm font-extralight"> Already Have An Account? <Link className="italic text-blue-400" to="/login">Login Now!</Link></p>
