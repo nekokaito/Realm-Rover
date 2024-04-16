@@ -28,7 +28,7 @@ export default function Card({data}) {
    <div className="flex items-center gap-2"> <IoPricetagOutline />{price/ 1000000}M$</div>
    </div>
     <div className="flex my-3 justify-center items-center">
-     <Link to={`/estate/${id}`}><button className="btn btn-primary">View Property</button></Link> 
+     <Link to={`/estate/${id}`}><button className="btn bg-gray-500 text-white">View Property</button></Link> 
     </div>
   </div>
 </div>

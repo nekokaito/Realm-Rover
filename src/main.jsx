@@ -15,11 +15,13 @@ import Register from './layouts/account/Register';
 import AuthProvider from './provider/AuthProvider';
 import Details from './layouts/main/header/estate/Details';
 import Private from './provider/Private';
+import Error from './layouts/error/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",

@@ -20,10 +20,10 @@ const Details = () => {
       });
 
     return (
-        <div>
+        <div data-aos="fade-down-right">
             
 
-            <div className="mockup-window border bg-base-300 my-10">
+            <div  className="mockup-window border bg-base-300 my-10">
               <div className="flex justify-around gap-8 flex-col lg:flex-row">
                 <div className="p-10"><img className="rounded-3xl lg:w-[700px]" src={image} alt={estate_title} /></div>
                 <div className="flex justify-center flex-col">
