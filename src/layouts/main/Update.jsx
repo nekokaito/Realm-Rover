@@ -22,13 +22,13 @@ const Update = () => {
 
     return (
         <>
-        <h1 className="text-4xl text-center my-10 font-bold">Update Profile</h1>
+        <h1 className="text-4xl text-center my-10 font-bold animate__wobble animate__delay-2s">Update Profile</h1>
        <div className="flex my-14 justify-center p-10">
            <div className="glass w-full md:w-1/2 rounded-3xl">
 
             <div className="flex flex-col justify-around items-center p-5">
-            <div>
-                <img className="rounded-full w-40" src={user?.photoURL} alt="" />
+            <div className="rounded-full ">
+                <img className="rounded-full w-40 h-40" src={user?.photoURL} alt="" />
                 <h1 className="text-xl font-semibold text-center">{user?.displayName}</h1>
             </div>
 

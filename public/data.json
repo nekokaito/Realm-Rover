@@ -46,7 +46,7 @@
         "segment_name": "Hospitality",
         "description": "Five-star hotel providing exquisite accommodations and wellness facilities",
         "price": 75000000,
-        "status": "sale",
+        "status": "rent",
         "area": "80000 sq ft",
         "location": "Waterfront",
         "image": "https://i.ibb.co/hXgph8n/high.jpg",

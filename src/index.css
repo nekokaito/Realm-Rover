@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Maven+Pro:wght@400..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,4 +7,12 @@ body {
     background-image: url('https://i.ibb.co/1ddDxdq/pf-misc14-adj00809-kut-a.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.font-bebas-neue {
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+}
+.font-maven-pro {
+    font-family: "Maven Pro", sans-serif;
 }
