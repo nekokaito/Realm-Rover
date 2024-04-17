@@ -1,9 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaGithub  } from "react-icons/fa";
 import toast, { Toaster } from 'react-hot-toast';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 
@@ -12,7 +13,7 @@ const Login = () => {
    const {logIn, googleLogin, githubLogin} = useContext(AuthContext)
    const location = useLocation();
    const navigation = useNavigate();
- 
+   const [showPassword, setShowPassword] = useState(false);
      useEffect(() => {
     document.title = "Login | Realm Rover";
   }, []);
@@ -70,7 +71,20 @@ const Login = () => {
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+              <div className="relative border rounded-4xl input input-bordered">
+                        <input
+                            className="w-full py-2"
+                            type={showPassword ? "text" : "password"}
+                            name="password"
+                            placeholder="Password"
+                            id="" required />
+                        <span className="absolute top-3 right-2" onClick={() => setShowPassword(!showPassword)}>
+                            {
+                                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                            }
+
+                        </span>
+                    </div>
               
             </div>
             <div className="form-control mt-6">
