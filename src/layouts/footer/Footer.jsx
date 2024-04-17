@@ -5,7 +5,8 @@ const Footer = () => {
         <footer className="footer p-10 bg-neutral text-neutral-content glass">
   <aside>
     {/* Logo Here */}
-    <p>Industries Ltd.<br/>Providing reliable tech since 1992</p>
+     <img className="w-[200px]" src="/logowhite.png"></img>
+    <p>Providing reliable since 2007</p>
   </aside> 
   <nav>
     <h6 className="footer-title">Social</h6> 

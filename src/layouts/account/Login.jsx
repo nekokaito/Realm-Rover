@@ -74,7 +74,7 @@ const Login = () => {
               
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn bg-cyan-400 border-none text-white">Login</button>
             </div>
             <div className="my-5">
                 <p className="text-sm font-extralight"> Don't You Have An Account? <Link className="italic text-blue-400" to="/register">Register Now!</Link></p>

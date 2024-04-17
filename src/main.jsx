@@ -16,6 +16,7 @@ import AuthProvider from './provider/AuthProvider';
 import Details from './layouts/main/header/estate/Details';
 import Private from './provider/Private';
 import Error from './layouts/error/Error';
+import Contact from './layouts/main/Contact';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      }
+      ,
+      {
+        path: "/contact",
+        element: <Private><Contact></Contact></Private>
       }
     ]
   },

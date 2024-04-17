@@ -1,8 +1,12 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 
 const Update = () => {
     const {user, updateUserProfile} = useContext(AuthContext);
+
+    useEffect(() => {
+      document.title = "Update Profile | Realm Rover";
+    }, []);
     
     const Update = (e) => {
         e.preventDefault();
